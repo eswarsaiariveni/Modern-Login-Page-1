@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <!-- Boxicons -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="dashboard.css">
+
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+        <i class="bx bxs-dashboard"></i>
+        <span>MyDashboard</span>
+    </div>
+
+    <nav>
+
+        <a href="#" class="active">
+            <i class="bx bxs-home"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <a href="#">
+            <i class="bx bxs-user"></i>
+            <span>Profile</span>
+        </a>
+
+        <a href="#">
+            <i class="bx bxs-bar-chart-alt-2"></i>
+            <span>Analytics</span>
+        </a>
+
+        <a href="#">
+            <i class="bx bxs-message-rounded"></i>
+            <span>Messages</span>
+        </a>
+
+        <a href="#">
+            <i class="bx bxs-cog"></i>
+            <span>Settings</span>
+        </a>
+
+    </nav>
+
+    <button class="logout"
+            onclick="logout()">
+
+        <i class="bx bx-log-out"></i>
+
+        <span>Logout</span>
+
+    </button>
+
+</aside>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main">
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <div class="menu">
+            <i class="bx bx-menu"></i>
+        </div>
+
+        <div class="top-right">
+
+            <i class="bx bx-bell notification"></i>
+
+            <div class="profile">
+
+                <div class="profile-image">
+                    <i class="bx bxs-user"></i>
+                </div>
+
+                <div>
+                    <strong id="username">
+                        User
+                    </strong>
+
+                    <small>Online</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONTENT -->
+
+    <section class="content">
+
+        <div class="welcome">
+
+            <div>
+
+                <h1>
+                    Welcome back,
+                    <span id="welcomeUser">
+                        User
+                    </span> 👋
+                </h1>
+
+                <p>
+                    Here's what's happening with your account today.
+                </p>
+
+            </div>
+
+            <button class="action-btn">
+                <i class="bx bx-plus"></i>
+                New Activity
+            </button>
+
+        </div>
+
+
+        <!-- ================= CARDS ================= -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon blue">
+                    <i class="bx bx-user"></i>
+                </div>
+
+                <div>
+                    <p>Total Users</p>
+                    <h2>2,450</h2>
+                    <span class="increase">
+                        +12.5%
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon purple">
+                    <i class="bx bx-line-chart"></i>
+                </div>
+
+                <div>
+                    <p>Visitors</p>
+                    <h2>18,920</h2>
+                    <span class="increase">
+                        +8.2%
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon orange">
+                    <i class="bx bx-task"></i>
+                </div>
+
+                <div>
+                    <p>Projects</p>
+                    <h2>36</h2>
+                    <span class="increase">
+                        +4.7%
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon green">
+                    <i class="bx bx-wallet"></i>
+                </div>
+
+                <div>
+                    <p>Revenue</p>
+                    <h2>₹84,500</h2>
+                    <span class="increase">
+                        +15.8%
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= BOTTOM SECTION ================= -->
+
+        <div class="dashboard-grid">
+
+
+            <!-- CHART -->
+
+            <div class="panel chart-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>Performance</h3>
+                        <p>Monthly activity overview</p>
+                    </div>
+
+                    <select>
+                        <option>Last 7 Days</option>
+                        <option>Last 30 Days</option>
+                        <option>Last 6 Months</option>
+                    </select>
+
+                </div>
+
+                <div class="chart">
+
+                    <div class="bar"
+                         style="height:45%">
+                    </div>
+
+                    <div class="bar"
+                         style="height:65%">
+                    </div>
+
+                    <div class="bar"
+                         style="height:50%">
+                    </div>
+
+                    <div class="bar"
+                         style="height:80%">
+                    </div>
+
+                    <div class="bar"
+                         style="height:60%">
+                    </div>
+
+                    <div class="bar"
+                         style="height:90%">
+                    </div>
+
+                    <div class="bar"
+                         style="height:72%">
+                    </div>
+
+                </div>
+
+                <div class="days">
+
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                    <span>Sun</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- RECENT ACTIVITY -->
+
+            <div class="panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h3>Recent Activity</h3>
+
+                        <p>
+                            Latest updates
+                        </p>
+
+                    </div>
+
+                    <i class="bx bx-dots-horizontal-rounded"></i>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-icon">
+                        <i class="bx bx-user-plus"></i>
+                    </div>
+
+                    <div>
+                        <strong>New user registered</strong>
+                        <small>5 minutes ago</small>
+                    </div>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-icon">
+                        <i class="bx bx-check-circle"></i>
+                    </div>
+
+                    <div>
+                        <strong>Project completed</strong>
+                        <small>30 minutes ago</small>
+                    </div>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-icon">
+                        <i class="bx bx-message"></i>
+                    </div>
+
+                    <div>
+                        <strong>New message received</strong>
+                        <small>1 hour ago</small>
+                    </div>
+
+                </div>
+
+
+                <div class="activity">
+
+                    <div class="activity-icon">
+                        <i class="bx bx-cloud-upload"></i>
+                    </div>
+
+                    <div>
+                        <strong>File uploaded</strong>
+                        <small>2 hours ago</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+    // Get username from login
+    const username =
+        localStorage.getItem("username") || "User";
+
+    document.getElementById("username").textContent =
+        username;
+
+    document.getElementById("welcomeUser").textContent =
+        username;
+
+
+    // Logout
+    function logout() {
+
+        localStorage.removeItem("username");
+
+        window.location.href = "index.html";
+
+    }
+
+</script>
+
+</body>
+
+</html>
